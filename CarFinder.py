@@ -13,10 +13,9 @@ AutoCountry Vehicle Finder v0.2
 
 1. PRINT all Authorized Vehicles
 2. SEARCH for Authorized Vehicle
-3. Exit
+3. ADD Authorized Vehicle
+4. Exit
 ********************************""")
-
-
 
     answer = input("Enter Number: ")
 
@@ -31,4 +30,8 @@ AutoCountry Vehicle Finder v0.2
         else:
             print(f'{answer2} is not an authorized vehicle, if you received this in error please check the spelling and try again')
     elif answer == "3":
+        add = input("Please Enter the full Vehicle name you would like to add: ")
+        list = AllowedVehiclesList.append(add)
+        print(f'You have added {add} as an authorized vehicle')
+    elif answer == "4":
         exit("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
